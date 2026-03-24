@@ -59,3 +59,8 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logging.info("Bot stopped by user")
+
+import threading
+from web import run_web
+
+threading.Thread(target=run_web).start()
